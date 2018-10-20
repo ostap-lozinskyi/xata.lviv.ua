@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+}
+
+.headerItem {
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+
+.mainImg {
+    width: 100%;
+    display: flex;
+}
+
+.hotOffers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

@@ -130,12 +130,13 @@ a:hover {
 
 .arrow {
     position: relative;
-    top: 50%;
+    top: 35%;
 }
 
 .photoID {
-    width: 450px;
+    width: 550px;
     cursor: zoom-in;
+    max-height: 600px;
 }
 
 .photoIDmini {
@@ -189,7 +190,6 @@ a:hover {
 }
 
 .carousel {
-    min-height: 700px;
     padding-top: 15px;
 }
 

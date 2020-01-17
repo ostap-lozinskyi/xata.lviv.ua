@@ -4,10 +4,10 @@
 }
 
 body {
-}
-
-.mainImg {
-    width: 100%;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
@@ -18,18 +18,19 @@ h1 {
 
 .hotOffers {
     display: flex;
-    margin: 30px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 30px;
 }
 
 .hotOffersItem {
-    display: flex;
-    flex-direction: column;
     margin: 30px;
     padding: 15px;
     font-size: 30px;
     border: 3px double darkred;
     text-align: center;
+    width: 50%;
 }
 
 .hotOffersItem:hover {
@@ -38,7 +39,7 @@ h1 {
 
 .hotOfferImage {
     align-self: center;
-    width: 70%;
+    width: 80%;
 }
 
 a {
@@ -60,15 +61,31 @@ a:hover {
 }
 
 .header {
-    background-color: black;
-    color: white;
-    font-size: 34px;
+    background-image: url("../img/mainImg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     text-align: center;
-    padding: 10px;
+    height: 400px;
 }
 
-.headerItem {
-    margin-left: 50px;
+.headerTop {
+    background: black;
+    opacity: 0.8;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    height: 29%;
+    box-sizing: unset;
+}
+
+.headerText{
+    font-size: 34px;
+    color: white;
+    opacity: 1;
+    margin-bottom: 0;
+}
+
+.mainContent{
+    flex: 1;
 }
 
 .footer {
@@ -76,79 +93,25 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f6f6f6;
+    background-color: #323232;
     padding-top: 5px;
     padding-bottom: 5px;
     font-weight: bold;
     width: 100%;
+    height: 130px;
     color: black;
     margin-top: 20px;
+    margin-bottom: 0;
 }
 
-.footerFirstRow {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.footerText {
-    font-size: 16px;
-    text-align: right;
-    padding-right: 2%;
-    width: 50%;
-}
-
-.footerFollow {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    padding-left: 2%;
-    width: 50%;
-}
-
-.footerDevelopedBy {
-    font-size: 12px;
-    margin-top: 10px;
-    font-weight: normal;
-}
-
-.footerLogo {
-    width: 30px;
-    margin-top: 3px;
-    margin-left: 20px;
-}
-
-.homePict {
-    width: 25px;
-}
-
-.itemMainPage {
-    width: 340px;
-}
-
-.item {
-    opacity: 1;
-    transition: opacity 0.75s ease-out;
-    width: 340px;
-    margin-bottom: 20px;
-}
-
-.item:hover {
-    opacity: 0.65;
-    transition: opacity 0.75s ease-in;
-}
-
-.hover {
-    position: relative;
-    top: -250px;
-    z-index: 100;
-    height: 0;
-}
-
-.betweenButtons {
-    margin-bottom: 10px;
+.footerBottom {
+    width: 70%;
+    padding-top: 30px;
+    margin-bottom: 0;
+    border-top: 2px solid #494949;
+    box-shadow: 0 -1px 0 #1e1e1e;
+    text-align: center;
+    color: #999999;
 }
 
 .arrow {
@@ -188,16 +151,6 @@ a:hover {
     font-size: 50px;
 }
 
-.logoID {
-    width: 250px;
-    margin-bottom: 10px;
-}
-
-.mainVideo {
-    margin-top: -30px;
-    width: 100%;
-}
-
 .carousel-inner {
     margin: 0;
 }
@@ -222,73 +175,6 @@ a:hover {
     padding: 0;
 }
 
-.mainTitle {
-    font-weight: bold;
-    font-size: 26px;
-    margin-top: 20px;
-}
-
-.articleTitle {
-    font-weight: bold;
-    margin-bottom: 15px;
-    font-size: 24px;
-}
-
-.articleText {
-    text-align: justify;
-    font-size: 16px;
-}
-
-.articlePhoto {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.btn {
-    margin-bottom: 10px;
-}
-
-.aboutUsPhoto {
-    width: 340px;
-}
-
-.aboutUsText {
-    text-align: justify;
-    list-style-position: inside;
-}
-
-.emailTel {
-    border-radius: unset;
-    border-color: black;
-}
-
-.emailText {
-    border-radius: unset;
-    border-color: black;
-}
-
-.emailSendButton {
-    width: 100px;
-    height: 30px;
-    background-color: black;
-    color: white;
-    border: none black;
-    cursor: pointer;
-}
-
-.emailSendButton:active {
-    background-color: gray;
-}
-
-.emailLabel {
-    font-weight: bold;
-}
-
-.textBold {
-    font-weight: bold;
-}
-
 .idText {
     text-align: justify;
     margin-top: 15%;
@@ -298,71 +184,23 @@ a:hover {
     display: none;
 }
 
-.underlined {
-    text-decoration: underline;
-}
+@media screen and (max-width: 992px) {
 
-@media all and (orientation: portrait) {
-
-
-    .headerItem {
-        margin-top: 30px;
-        margin-left: 0;
+    h1 {
+        font-size: 50px;
     }
 
-    .homePict {
-        width: 60px;
+    .headerTop {
+        height: 15%;
     }
 
-    .articleTitle {
-        font-size: 36px;
+    .hotOffers {
+        flex-direction: column;
     }
 
-    .articleText {
-        font-size: 36px;
-    }
-
-    .mainTitle {
-        font-size: 36px;
-    }
-
-    .itemMainPage {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .aboutUsPhoto {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .aboutUsText {
-        font-size: 36px;
-    }
-
-    .contactsText {
-        font-size: 36px;
-        margin-left: 3%;
-    }
-
-    .emailTel {
-        height: 100px;
-        font-size: 36px;
-    }
-
-    .emailText {
-        height: 200px;
-        font-size: 36px;
-    }
-
-    .emailLabel {
-        font-size: 36px;
-    }
-
-    .emailSendButton {
-        width: 300px;
-        height: 90px;
-        font-size: 36px;
+    .hotOffersItem {
+        width: 90%;
+        font-size: 40px;
     }
 
     .landscapeHidden {
@@ -378,7 +216,7 @@ a:hover {
     }
 
     .photoIDmini {
-        width: 25%;
+        width: 45%;
         margin-top: 50px;
     }
 
@@ -396,40 +234,4 @@ a:hover {
         min-width: 100%;
     }
 
-    .footer {
-        flex-direction: column;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        margin-top: 30px;
-        font-weight: bold;
-        width: 100%;
-    }
-
-    .footerFirstRow {
-        flex-direction: column;
-    }
-
-    .footerText {
-        font-size: 36px;
-        margin-top: 10px;
-        width: auto;
-    }
-
-    .footerFollow {
-        font-size: 36px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        width: auto;
-    }
-
-    .footerLogo {
-        width: 60px;
-        margin-top: 3px;
-        margin-left: 40px;
-    }
-
-    .footerDevelopedBy {
-        font-size: 30px;
-        margin-bottom: 25px;
-    }
 }
